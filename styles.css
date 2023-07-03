@@ -1,0 +1,292 @@
+* {
+  margin: 0px;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+#main {
+  display: flex;
+  width: 50%;
+border-radius: 5%;
+  box-shadow: 10px 10px 25px -2px hsl(0, 0%, 93%);
+
+}
+
+#blue-section {
+  width: 50%;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  background-image: linear-gradient(
+    to right,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    hsl(241, 81%, 54%),
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  background-size: 200%;
+  height: 20vh;
+  width: 20vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  transition: 1s;
+}
+#circle:hover {
+  background-position: right;
+}
+.updown {
+  animation: updown 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes updown {
+  to {
+    transform: translateY(8px);
+  }
+}
+.grow {
+  transition: 1s;
+}
+.grow:hover {
+  scale: 1.1;
+}
+
+#great {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+h2 {
+  font-size: 1.6em;
+}
+h1 {
+  font-size: 4.5em;
+}
+.gray {
+  color: hsla(0, 0%, 100%, 60%);
+}
+.white {
+  color: hsla(0, 0%, 100%, 100%);
+}
+
+.text {
+  max-width: 65%;
+  text-align: center;
+  padding: 1.5em;
+}
+
+#summary {
+  margin-left: 3em;
+}
+#summary-section {
+  width: 50%;
+  background-color: hsla(0, 0%, 100%, 100%);
+  border-radius: 5%;
+
+}
+
+.colorfull {
+  display: flex;
+  border-radius: 10px;
+  padding: 15px;
+  width: 75%;
+  margin-bottom: 0.75em;
+  justify-content: space-between;
+}
+
+.red {
+  background-color: hsla(0, 100%, 67%, 10%);
+}
+
+.yellow {
+  background-color: hsla(39, 100%, 56%, 10%);
+}
+
+.green {
+  background-color: hsla(166, 100%, 37%, 10%);
+}
+
+.blue {
+  background-color: hsla(234, 85%, 45%, 10%);
+}
+.summaryheading {
+  padding-bottom: 4vh;
+  padding-top: 3vh;
+}
+span {
+  display: flex;
+}
+img {
+  padding-right: 0.5em;
+}
+
+.redtext {
+  color: hsl(0, 100%, 67%);
+}
+
+.yellowtext {
+  color: hsl(39, 100%, 56%);
+}
+
+.greentext {
+  color: hsl(166, 100%, 37%);
+}
+
+.bluetext {
+  color: hsl(234, 85%, 45%);
+}
+
+.bold {
+  padding-right: 0.25em;
+  color: hsl(224, 30%, 27%);
+}
+
+.darker-gray {
+  color: hsla(0, 0%, 60%, 0.849);
+}
+
+button {
+  border-radius: 30px;
+  width: 85%;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  background-color: hsl(224, 30%, 27%);
+  border: none;
+  padding: 15px;
+  margin-top: 20px;
+  transition: 1s;
+}
+button:hover {
+  background-color: hsl(241, 100%, 89%);
+  color: hsl(224, 30%, 27%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+@media all and (max-width: 480px) {
+  #main {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0%;
+  }
+  #blue-section {
+    width: 100%;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    border-top-right-radius: 0%;
+    border-top-left-radius: 0%;
+  }
+  .colorfull {
+    width: 75%;
+  }
+  #summary-section {
+    width: 100%;
+    padding-bottom: 2vh;
+  }
+  h1 {
+    font-size: 52px;
+  }
+  p {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 912px) {
+  #main {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0%;
+  }
+  #blue-section {
+    width: 100%;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    border-top-right-radius: 0%;
+    border-top-left-radius: 0%;
+  }
+  .colorfull {
+    width: 90%;
+  }
+  #summary-section {
+    width: 100%;
+    padding-bottom: 2vh;
+  }
+  h1 {
+    font-size: 82px;
+  }
+  p {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  button {
+    width: 95%;
+    padding: 20px;
+    font-size: 24px;
+  }
+}
+
+@media all and (min-width: 913px) and (max-width: 1279px) {
+  h3 {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h4{
+    font-size: 0.9em;
+  }
+  p{
+    font-size: .9em;
+  }
+  #summary-section {
+    padding-bottom: 3vh;
+  }
+  button{
+    margin-top: 10px;
+  }
+}
